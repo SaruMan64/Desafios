@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "roboto";
+  src: url(Roboto-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -84,12 +89,6 @@ header a:hover {
   text-shadow: none;
 }
 
-@media screen and (max-width: 900px) {
-  .division {
-    visibility: hidden;
-  }
-}
-
 main {
   position: relative;
   top: 0;
@@ -102,6 +101,7 @@ main {
   opacity: 70%;
   object-fit: cover;
   object-position: bottom;
+  z-index: 1;
 }
 #colormenu {
   width: 100%;
@@ -118,15 +118,19 @@ main {
     rgba(10, 106, 151, 0.115489) 71.35%,
     rgba(10, 106, 151, 0) 100%
   );
+  z-index: 0;
 }
-#apresentacao h2 {
+#apresentacao > h2 {
   margin-top: 10px;
   width: 70%;
   height: calc(100vh - 190px);
   font-family: "Sanchez", serif;
   font-size: 34px;
   margin-left: 10%;
-  color: white;
+  color: rgb(255, 255, 255);
+  z-index: 5;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 #sobre {
   position: relative;
@@ -136,7 +140,6 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-
 }
 #sobre h3,
 #sobre p {
@@ -241,11 +244,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@font-face {
-  font-family: "roboto";
-  src: url(Roboto-Regular.ttf);
 }
 
 #contact h2 {
@@ -363,4 +361,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 1336px) {
+  .division {
+    visibility: hidden;
+  }
+  .handshake {
+    object-position: 63% 50%;
+  }
 }
