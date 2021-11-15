@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }
 body {
@@ -90,7 +91,7 @@ header a:hover {
 }
 
 main {
-  position: absolute;
+  position: relative;
   top: 0;
 }
 .handshake {
@@ -121,23 +122,31 @@ main {
 #apresentacao h2 {
   margin-top: 10px;
   width: 70%;
-  height: 500px;
+  height: calc(100vh - 190px);
   font-family: "Sanchez", serif;
   font-size: 34px;
   margin-left: 10%;
   color: white;
 }
 #sobre {
-  margin-top: 70px;
+  position: relative;
+  height: 820px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  height: 800px;
+  justify-content: start;
+  align-items: center;
+
+}
+#sobre h3,
+#sobre p {
+  display: flex;
+  flex-direction: column;
   width: 60%;
-  margin-left: 20%;
   text-align: center;
   justify-content: center;
   align-items: center;
-  position: relative;
+  z-index: 2;
 }
 #sobre > h3 {
   font-family: Roboto, sans-serif;
@@ -150,11 +159,12 @@ main {
   font-size: 24px;
 }
 #sobre img {
+  bottom: 0px;
   right: 0;
-  bottom: 0;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  object-fit: cover;
+  width: clamp(20%, 35%, 549px);
+  opacity: 85%;
 }
 
 /* AUGUSTO ----------------------------- */
@@ -251,16 +261,6 @@ main {
   margin-bottom: 10px;
 }
 
-footer {
-  width: 100%;
-  border-top: 0.5px solid #ffffff;
-  height: 95px;
-  background-color: #17739c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #left {
   width: 285px;
   height: 120px;
@@ -274,7 +274,7 @@ footer {
 
 #copyright {
   font-family: roboto;
-  font-size: 24px;
+  font-size: 16px;
   color: #ffffff;
 }
 
@@ -348,9 +348,19 @@ button {
   border-radius: 12px;
   font-family: roboto;
   font-size: 24px;
-  margin-left: 345px;
+  margin-left: 318px;
 }
 
 button:hover {
   border: 1px solid #13293d;
+}
+
+footer {
+  width: 100%;
+  border-top: 0.5px solid #ffffff;
+  height: 95px;
+  background-color: #17739c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
