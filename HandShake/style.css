@@ -394,10 +394,13 @@ footer {
     width: 158px;
     height: 53px;
   }
-  .division {
-    visibility: hidden;
-  }
+
   .handshake {
     object-position: 63% 50%;
+  }
+}
+@media screen and (max-width: 798px) {
+  .division {
+    visibility: hidden;
   }
 }
