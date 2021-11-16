@@ -338,14 +338,9 @@ button {
   width: 167px;
   height: 55px;
   color: #ffffff;
-  background: rgb(27, 152, 224);
-  background: linear-gradient(
-    0deg,
-    rgba(27, 152, 224, 0) 40%,
-    rgba(27, 152, 224, 1) 100%
-  );
+  border: 1px solid #fff;
+  background-color: transparent;
   box-shadow: 2px 2px 4px 0px #00000040;
-  border: none;
   border-radius: 12px;
   font-family: roboto;
   font-size: 24px;
@@ -353,7 +348,10 @@ button {
 }
 
 button:hover {
-  border: 1px solid #13293d;
+  background-color: #fff;
+  color: #005d8a;
+  border-color: #005d8a;
+  text-shadow: none;
 }
 
 footer {
