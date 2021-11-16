@@ -10,6 +10,11 @@
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
 }
+
+html{
+  scroll-padding-top: 50px;
+}
+
 body {
   width: 100%;
 }
@@ -87,6 +92,9 @@ header a:hover {
   color: #005d8a;
   border-color: #005d8a;
   text-shadow: none;
+}
+.active {
+  color: #cce;
 }
 
 main {
@@ -190,6 +198,7 @@ main {
   font-size: 42px;
   font-weight: bold;
   margin: 50px 0 0 0;
+  text-align: center;
 }
 
 #section2 .services {
@@ -242,9 +251,10 @@ main {
 
 #contact {
   background-color: #17739c;
-  height: 537px;
+  height: 630px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -263,14 +273,12 @@ main {
 }
 
 #left {
-  width: 285px;
-  height: 120px;
+  width: 486px;
+  height: 297px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding-right: 109px;
-  padding-bottom: 190px;
 }
 
 #copyright {
@@ -394,11 +402,23 @@ footer {
     height: 53px;
   }
 }
-@media screen and (max-width: 798px) {
+@media screen and (max-width: 998px) {
   .division {
-    visibility: hidden;
+    height: 70%;
   }
   .handshake {
     object-position: 63% 50%;
+  }
+  #contact {
+    align-items: flex-start;
+    height: 630px;
+  }
+  #left {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 788px) {
+  .division {
+    visibility: hidden;
   }
 }
